@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { send } from 'q';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Mono-rent';
+  utenti : Array<string> = [];
+
+
+
+
+
+  send(user:HTMLInputElement) : boolean{
+ this.utenti.push(user.value);
+ return false;
+}
+
+
+
 }
